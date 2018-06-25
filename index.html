@@ -6,6 +6,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Document</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	
+	
+	<style>
+  .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20px; }
+  .toggle.ios .toggle-handle { border-radius: 20px; }
+</style>
+	
+	
+	
+
 	<title>Coder's Point</title>
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -51,7 +62,7 @@
 						
 						<div class="info">
 							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-								<span>
+								<span class="browse">
 									Browse your code here
 									
 								</span>
@@ -157,9 +168,16 @@
 					</div>
 				</div>
 				<footer class="footer">
-					<div class="container-fluid">
-						
+					<div class="container-fluid footFont">
+					<!--=================-->
+					     Dark mode
+						<label class="switch" style="margin: 2px;">
+  						<input type="checkbox" class="pip" data-toggle="toggle" data-style="ios"  >
+ 					    
+						</label>
 						<div class="copyright ml-auto">
+						
+							
 							2018, made with <i class="la la-heart heart text-danger"></i> by <a href="#">Sonali & Abhi</a>
 						</div>				
 					</div>
@@ -249,7 +267,86 @@
 	});
 
 </script>
+
+
+<!--========jquery for toggle========-->
+
+<script>
+	
+	$(function(){
+		
+		
+		$(".switch").click(function(){
+			if($('input[type="checkbox"]').is(":checked")==true)
+		{
+			
+			$(".footer").css("background-color","#FFF");
+			$(".main-panel").css("background-color","#f2f3f8");
+			$(".card").css("background-color","#FFF");
+			$(".main-header").css("background-color","#FFF");
+			$(".sidebar").css("background-color","#FFF");
+			$(".logo").css("color","#575962");
+			$(".browse").css("color","#575962");
+			$(".footFont").css("color","#575962");
+			
+			
+			//borders
+			$(".card").css("border-color","#f2f3f8");
+			$(".footer").css("border-color","#f2f3f8");
+			$(".main-header").css("border-color","#f2f3f8");
+			$(".main-panel").css("border-color","#f2f3f8");
+			$(".card-body").css("border-color","#f2f3f8");
+			$(".user").css("border-color","#f2f3f8");
+			
+			
+			$(".sidebar").css("border-color","#f2f3f8");
+			$(".sidebar").css("border-color","#f2f3f8");
+			$(".main-header .logo-header").css("border-color","#f2f3f8");
+			$(".card .card-header").css("border-color","#f2f3f8");
+			
+			
+		}
+			else
+				{
+					$(".footer").css("background-color","#272b33");
+					$(".main-panel").css("background-color","#272b33");
+					$(".card").css("background-color","#2b313a");
+					$(".main-header").css("background-color","#000");
+					$(".sidebar").css("background-color","#000");
+					$(".logo").css("color","#9ca4b5");
+					$(".browse").css("color","#9ca4b5");
+					$(".browse").css("color","#949aa8");
+					
+					
+					
+					$(".card").css("border-color","#272b33");
+			$(".footer").css("border-color","#272b33");
+			$(".main-header").css("border-color","#272b33");
+			$(".main-panel").css("border-color","#272b33");
+			$(".card-body").css("border-color","#272b33");
+			
+			$(".user").css("border-color","#272b33");
+			
+			$(".sidebar").css("border-color","#272b33");
+			$(".main-header .logo-header").css("border-color","#272b33");
+				$(".card-header").css("border-bottom","1px solid #000");
+					
+					
+					
+				}
+		});
+		
+		
+		
+	});
+	
+	
+		
+	</script>
+
+
 <!--===================================-->
+
 <script src="assets/js/core/jquery.3.2.1.min.js"></script>
 <script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script src="assets/js/core/popper.min.js"></script>
