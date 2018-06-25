@@ -1,0 +1,7 @@
+def third_largest(numbers):
+     return heapq.nlargest(3, numbers)[2]
+n = 100000
+numbers = list(range(n))
+random.shuffle(numbers)
+
+print(third_largest(numbers))
